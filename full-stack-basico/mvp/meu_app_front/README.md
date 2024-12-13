@@ -1,8 +1,9 @@
 # Meu Front
 
-Este pequeno projeto faz parte do material diático da Disciplina **Desenvolvimento Full Stack Básico** 
+Este pequeno projeto de MVP da Disciplina **Desenvolvimento Full Stack Básico** 
+O projeto tem por objetivo auxiliar o gerenciamento de escala de férias de uma empresa. 
+A ideia inicial foi pensando no recesso de final de ano, no entanto o MVP serve para o gerenciamento geral de férias da equipe.
 
-O objetivo aqui é ilutsrar o conteúdo apresentado na terceira aula.
 
 ---
 ## Como executar

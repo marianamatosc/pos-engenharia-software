@@ -1,0 +1,48 @@
+[2024-12-12 22:19:18,751] INFO _log() L97   127.0.0.1 - - [12/Dec/2024 22:19:18] "[36mGET /openapi/swagger/js/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 - - call_trace=C:\Users\maria\OneDrive\Documentos\Cursos\Testes\desenvolvimento\basico\aula-3-novo\meu_app_api\env\Lib\site-packages\werkzeug\_internal.py L97  
+[2024-12-12 22:19:18,915] INFO _log() L97   127.0.0.1 - - [12/Dec/2024 22:19:18] "GET /openapi/openapi.json HTTP/1.1" 200 - - call_trace=C:\Users\maria\OneDrive\Documentos\Cursos\Testes\desenvolvimento\basico\aula-3-novo\meu_app_api\env\Lib\site-packages\werkzeug\_internal.py L97  
+[2024-12-12 22:19:18,917] INFO _log() L97   127.0.0.1 - - [12/Dec/2024 22:19:18] "[36mGET /openapi/swagger/images/swagger.svg HTTP/1.1[0m" 304 - - call_trace=C:\Users\maria\OneDrive\Documentos\Cursos\Testes\desenvolvimento\basico\aula-3-novo\meu_app_api\env\Lib\site-packages\werkzeug\_internal.py L97  
+[2024-12-12 22:19:25,210] INFO _log() L97   127.0.0.1 - - [12/Dec/2024 22:19:25] "GET /escala?nome_funcionario=Mariana HTTP/1.1" 200 - - call_trace=C:\Users\maria\OneDrive\Documentos\Cursos\Testes\desenvolvimento\basico\aula-3-novo\meu_app_api\env\Lib\site-packages\werkzeug\_internal.py L97  
+[2024-12-12 22:19:36,181] ERROR log_exception() L875  Exception on /escalas [GET] - call_trace=C:\Users\maria\OneDrive\Documentos\Cursos\Testes\desenvolvimento\basico\aula-3-novo\meu_app_api\env\Lib\site-packages\flask\app.py L875 
+Traceback (most recent call last):
+  File "C:\Users\maria\OneDrive\Documentos\Cursos\Testes\desenvolvimento\basico\aula-3-novo\meu_app_api\env\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maria\OneDrive\Documentos\Cursos\Testes\desenvolvimento\basico\aula-3-novo\meu_app_api\env\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maria\OneDrive\Documentos\Cursos\Testes\desenvolvimento\basico\aula-3-novo\meu_app_api\env\Lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maria\OneDrive\Documentos\Cursos\Testes\desenvolvimento\basico\aula-3-novo\meu_app_api\env\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maria\OneDrive\Documentos\Cursos\Testes\desenvolvimento\basico\aula-3-novo\meu_app_api\env\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maria\OneDrive\Documentos\Cursos\Testes\desenvolvimento\basico\aula-3-novo\meu_app_api\env\Lib\site-packages\flask_openapi3\scaffold.py", line 117, in view_func
+    response = func(**func_kwargs)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maria\OneDrive\Documentos\Cursos\Testes\desenvolvimento\basico\aula-3-novo\meu_app_api\app.py", line 83, in get_escalas
+    return apresenta_escalas(escalas), 200
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maria\OneDrive\Documentos\Cursos\Testes\desenvolvimento\basico\aula-3-novo\meu_app_api\schemas\escala.py", line 32, in apresenta_escalas
+    for escala in escalas:
+                  ^^^^^^^
+NameError: name 'escalas' is not defined. Did you mean: 'escala'?
+[2024-12-12 22:19:36,197] INFO _log() L97   127.0.0.1 - - [12/Dec/2024 22:19:36] "[35m[1mGET /escalas HTTP/1.1[0m" 500 - - call_trace=C:\Users\maria\OneDrive\Documentos\Cursos\Testes\desenvolvimento\basico\aula-3-novo\meu_app_api\env\Lib\site-packages\werkzeug\_internal.py L97  
+[2024-12-12 22:22:01,345] INFO _log() L97   [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.15.4:5000 - call_trace=C:\Users\maria\OneDrive\Documentos\Cursos\Testes\desenvolvimento\basico\aula-3-novo\meu_app_api\env\Lib\site-packages\werkzeug\_internal.py L97  
+[2024-12-12 22:22:01,347] INFO _log() L97   [33mPress CTRL+C to quit[0m - call_trace=C:\Users\maria\OneDrive\Documentos\Cursos\Testes\desenvolvimento\basico\aula-3-novo\meu_app_api\env\Lib\site-packages\werkzeug\_internal.py L97  
+[2024-12-12 22:22:26,491] INFO _log() L97   127.0.0.1 - - [12/Dec/2024 22:22:26] "POST /escala HTTP/1.1" 200 - - call_trace=C:\Users\maria\OneDrive\Documentos\Cursos\Testes\desenvolvimento\basico\aula-3-novo\meu_app_api\env\Lib\site-packages\werkzeug\_internal.py L97  
+[2024-12-12 22:22:31,841] WARNING add_escala() L53   Erro ao adicionar escala 'Mariana', Escala de mesmo nome_funcionario já salvo na base :/ - call_trace=C:\Users\maria\OneDrive\Documentos\Cursos\Testes\desenvolvimento\basico\aula-3-novo\meu_app_api\app.py L53  
+[2024-12-12 22:22:31,843] INFO _log() L97   127.0.0.1 - - [12/Dec/2024 22:22:31] "[31m[1mPOST /escala HTTP/1.1[0m" 409 - - call_trace=C:\Users\maria\OneDrive\Documentos\Cursos\Testes\desenvolvimento\basico\aula-3-novo\meu_app_api\env\Lib\site-packages\werkzeug\_internal.py L97  
+[2024-12-12 22:22:57,347] INFO _log() L97   127.0.0.1 - - [12/Dec/2024 22:22:57] "POST /escala HTTP/1.1" 200 - - call_trace=C:\Users\maria\OneDrive\Documentos\Cursos\Testes\desenvolvimento\basico\aula-3-novo\meu_app_api\env\Lib\site-packages\werkzeug\_internal.py L97  
+[2024-12-12 22:23:27,798] INFO _log() L97   127.0.0.1 - - [12/Dec/2024 22:23:27] "[32mGET / HTTP/1.1[0m" 302 - - call_trace=C:\Users\maria\OneDrive\Documentos\Cursos\Testes\desenvolvimento\basico\aula-3-novo\meu_app_api\env\Lib\site-packages\werkzeug\_internal.py L97  
+[2024-12-12 22:23:27,809] INFO _log() L97   127.0.0.1 - - [12/Dec/2024 22:23:27] "GET /openapi/ HTTP/1.1" 200 - - call_trace=C:\Users\maria\OneDrive\Documentos\Cursos\Testes\desenvolvimento\basico\aula-3-novo\meu_app_api\env\Lib\site-packages\werkzeug\_internal.py L97  
+[2024-12-12 22:23:38,392] INFO _log() L97   127.0.0.1 - - [12/Dec/2024 22:23:38] "DELETE /escala?nome_funcionario=Mariana HTTP/1.1" 200 - - call_trace=C:\Users\maria\OneDrive\Documentos\Cursos\Testes\desenvolvimento\basico\aula-3-novo\meu_app_api\env\Lib\site-packages\werkzeug\_internal.py L97  
+[2024-12-12 22:23:48,666] WARNING get_escala() L102  Erro ao buscar escala 'Mariana', Escala não encontrado na base :/ - call_trace=C:\Users\maria\OneDrive\Documentos\Cursos\Testes\desenvolvimento\basico\aula-3-novo\meu_app_api\app.py L102 
+[2024-12-12 22:23:48,668] INFO _log() L97   127.0.0.1 - - [12/Dec/2024 22:23:48] "[33mGET /escala?nome_funcionario=Mariana HTTP/1.1[0m" 404 - - call_trace=C:\Users\maria\OneDrive\Documentos\Cursos\Testes\desenvolvimento\basico\aula-3-novo\meu_app_api\env\Lib\site-packages\werkzeug\_internal.py L97  
+[2024-12-12 22:23:54,381] INFO _log() L97   127.0.0.1 - - [12/Dec/2024 22:23:54] "GET /escala?nome_funcionario=Matheus HTTP/1.1" 200 - - call_trace=C:\Users\maria\OneDrive\Documentos\Cursos\Testes\desenvolvimento\basico\aula-3-novo\meu_app_api\env\Lib\site-packages\werkzeug\_internal.py L97  
+[2024-12-12 22:24:17,516] INFO _log() L97   127.0.0.1 - - [12/Dec/2024 22:24:17] "POST /escala HTTP/1.1" 200 - - call_trace=C:\Users\maria\OneDrive\Documentos\Cursos\Testes\desenvolvimento\basico\aula-3-novo\meu_app_api\env\Lib\site-packages\werkzeug\_internal.py L97  

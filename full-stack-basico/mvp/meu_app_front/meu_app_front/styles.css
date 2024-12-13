@@ -1,0 +1,140 @@
+body,
+ul,
+li {
+    font-family: "Century Gothic", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(225, 222, 199);
+}
+
+header {
+    background-color: rgb(225, 222, 199);
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+.title {
+    color: white;
+    width: 100%;
+    background-color: rgb(198, 143, 33);
+    display: inline-block;
+    padding: 10px 0px;
+    position: sticky;
+    top: 0px;
+}
+
+.banner {
+    height: 175px;
+    overflow: hidden;
+}
+
+.banner img {
+    margin: 0px 0px 0px 0px;
+    width: 100%;
+}
+
+.newItem {
+    background-color: rgb(225, 222, 199);
+    padding: 30px 40px;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.newItem:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#newInput {
+    margin: 0;
+    border: 1px solid rgb(231, 228, 219);
+    width: 25%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 2px
+}
+
+#newDataInicio {
+    margin: 0;
+    border: 1px solid  rgb(231, 228, 219);
+    width: 8%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 2px
+}
+
+#newDataFim{
+    margin: 0;
+    border: 1px solid  rgb(231, 228, 219);
+    width: 8%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 2px
+}
+
+
+.addBtn {
+    padding: 9px 10px;
+    background-color: rgb(76, 59, 11);
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: "Century Gothic", sans-serif;
+    border-radius: 2px;
+}
+
+.addBtn:hover {
+    background-color: #b5792a;
+    color: white;
+}
+
+.items {
+    margin: 0;
+    padding:10;
+    display: flex;
+    justify-content: center;
+}
+
+.close:hover {
+    color: #b5792a;
+    font-weight: bolder;
+}
+
+table,
+th,
+td {
+    border: 1px solid white;
+    border-collapse: collapse;
+    cursor: pointer;
+    position: relative;
+    padding: 0px 40px 0px 30px;
+    font-size: 16px;
+    transition: 0.2s;
+    text-align: left;
+    color: #784e19;
+}
+
+table{
+    background-color: rgb(235, 231, 225);
+    width: 50%;
+    text-align: center;
+}
+
+tr:nth-child(odd){
+    background-color: #eee;
+}
+
+th:nth-child(1){
+    width: 80%;
+}
+
+tr:hover {
+    background: rgb(200, 199, 199);
+}
+

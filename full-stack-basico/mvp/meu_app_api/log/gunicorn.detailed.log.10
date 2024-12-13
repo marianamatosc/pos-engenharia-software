@@ -1,0 +1,73 @@
+[2024-12-12 01:16:30,630] ERROR log_exception() L875  Exception on /escala [DELETE] - call_trace=C:\Users\maria\OneDrive\Documentos\Cursos\Testes\desenvolvimento\basico\aula-3-novo\meu_app_api\env\Lib\site-packages\flask\app.py L875 
+Traceback (most recent call last):
+  File "C:\Users\maria\OneDrive\Documentos\Cursos\Testes\desenvolvimento\basico\aula-3-novo\meu_app_api\env\Lib\site-packages\sqlalchemy\engine\base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\maria\OneDrive\Documentos\Cursos\Testes\desenvolvimento\basico\aula-3-novo\meu_app_api\env\Lib\site-packages\sqlalchemy\engine\default.py", line 941, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such column: escala.nome_funcionario
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\maria\OneDrive\Documentos\Cursos\Testes\desenvolvimento\basico\aula-3-novo\meu_app_api\env\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maria\OneDrive\Documentos\Cursos\Testes\desenvolvimento\basico\aula-3-novo\meu_app_api\env\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maria\OneDrive\Documentos\Cursos\Testes\desenvolvimento\basico\aula-3-novo\meu_app_api\env\Lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maria\OneDrive\Documentos\Cursos\Testes\desenvolvimento\basico\aula-3-novo\meu_app_api\env\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maria\OneDrive\Documentos\Cursos\Testes\desenvolvimento\basico\aula-3-novo\meu_app_api\env\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maria\OneDrive\Documentos\Cursos\Testes\desenvolvimento\basico\aula-3-novo\meu_app_api\env\Lib\site-packages\flask_openapi3\scaffold.py", line 117, in view_func
+    response = func(**func_kwargs)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maria\OneDrive\Documentos\Cursos\Testes\desenvolvimento\basico\aula-3-novo\meu_app_api\app.py", line 125, in del_escala
+    count = session.query(Escala).filter(Escala.nome_funcionario == escala_nome_funcionario).delete()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maria\OneDrive\Documentos\Cursos\Testes\desenvolvimento\basico\aula-3-novo\meu_app_api\env\Lib\site-packages\sqlalchemy\orm\query.py", line 3162, in delete
+    result: CursorResult[Any] = self.session.execute(
+                                ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maria\OneDrive\Documentos\Cursos\Testes\desenvolvimento\basico\aula-3-novo\meu_app_api\env\Lib\site-packages\sqlalchemy\orm\session.py", line 2362, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maria\OneDrive\Documentos\Cursos\Testes\desenvolvimento\basico\aula-3-novo\meu_app_api\env\Lib\site-packages\sqlalchemy\orm\session.py", line 2247, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maria\OneDrive\Documentos\Cursos\Testes\desenvolvimento\basico\aula-3-novo\meu_app_api\env\Lib\site-packages\sqlalchemy\orm\bulk_persistence.py", line 2021, in orm_execute_statement
+    return super().orm_execute_statement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maria\OneDrive\Documentos\Cursos\Testes\desenvolvimento\basico\aula-3-novo\meu_app_api\env\Lib\site-packages\sqlalchemy\orm\context.py", line 305, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "C:\Users\maria\OneDrive\Documentos\Cursos\Testes\desenvolvimento\basico\aula-3-novo\meu_app_api\env\Lib\site-packages\sqlalchemy\engine\base.py", line 1418, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\maria\OneDrive\Documentos\Cursos\Testes\desenvolvimento\basico\aula-3-novo\meu_app_api\env\Lib\site-packages\sqlalchemy\sql\elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maria\OneDrive\Documentos\Cursos\Testes\desenvolvimento\basico\aula-3-novo\meu_app_api\env\Lib\site-packages\sqlalchemy\engine\base.py", line 1640, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maria\OneDrive\Documentos\Cursos\Testes\desenvolvimento\basico\aula-3-novo\meu_app_api\env\Lib\site-packages\sqlalchemy\engine\base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maria\OneDrive\Documentos\Cursos\Testes\desenvolvimento\basico\aula-3-novo\meu_app_api\env\Lib\site-packages\sqlalchemy\engine\base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "C:\Users\maria\OneDrive\Documentos\Cursos\Testes\desenvolvimento\basico\aula-3-novo\meu_app_api\env\Lib\site-packages\sqlalchemy\engine\base.py", line 2355, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\maria\OneDrive\Documentos\Cursos\Testes\desenvolvimento\basico\aula-3-novo\meu_app_api\env\Lib\site-packages\sqlalchemy\engine\base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\maria\OneDrive\Documentos\Cursos\Testes\desenvolvimento\basico\aula-3-novo\meu_app_api\env\Lib\site-packages\sqlalchemy\engine\default.py", line 941, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such column: escala.nome_funcionario
+[SQL: DELETE FROM escala WHERE escala.nome_funcionario = ?]
+[parameters: ('Mariana',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2024-12-12 01:16:30,719] INFO _log() L97   127.0.0.1 - - [12/Dec/2024 01:16:30] "[35m[1mDELETE /escala?nome_funcionario=Mariana HTTP/1.1[0m" 500 - - call_trace=C:\Users\maria\OneDrive\Documentos\Cursos\Testes\desenvolvimento\basico\aula-3-novo\meu_app_api\env\Lib\site-packages\werkzeug\_internal.py L97  
+[2024-12-12 01:16:33,699] INFO _log() L97   127.0.0.1 - - [12/Dec/2024 01:16:33] "OPTIONS /escala?nome_funcionario=Matheus HTTP/1.1" 200 - - call_trace=C:\Users\maria\OneDrive\Documentos\Cursos\Testes\desenvolvimento\basico\aula-3-novo\meu_app_api\env\Lib\site-packages\werkzeug\_internal.py L97  

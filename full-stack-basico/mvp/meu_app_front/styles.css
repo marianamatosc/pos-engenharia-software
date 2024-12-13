@@ -119,7 +119,7 @@ header {
 table,
 th,
 td {
-    border: 1px solid rgba(231, 183, 153, 0.903);
+    border: 2px solid rgba(231, 183, 153, 0.903);
     border-collapse: collapse;
     cursor: pointer;
     position: relative;
@@ -128,11 +128,11 @@ td {
     transition: 0.2s;
     text-align: left;
     color: #784e19;
-    background-color: rgb(244, 242, 228); 
+    background-color: white; 
 }
 
 table{
-    background-color: white;
+    background-color: rgb(235, 231, 225);
     width: 50%;
     text-align: left;
     
